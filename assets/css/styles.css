@@ -218,7 +218,7 @@ img {
   fill: #004c8e;
 }
 .home__blob-img {
-  width: 360px;
+  width: 500px;
 }
 .home__box {
   position: relative;
@@ -255,6 +255,10 @@ img {
 .about__img img {
   width: 200px;
   border-radius: 0.5rem;
+}
+.sports {
+  margin-top: 20px;
+  text-align: center;
 }
 
 /* ===== SKILLS =====*/
@@ -542,4 +546,55 @@ img {
   mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
+}
+.slider {
+  width: 90%; /* Adjust this to fit your layout */
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+}
+
+.slides img {
+  flex: 0 0 100%; /* Each image takes full width of the slider */
+  object-fit: contain; /* Keeps the aspect ratio */
+}
+
+.slides:has(> :last-child:nth-child(2)) {
+  animation: slide2 22s infinite;
+}
+.slides:has(> :last-child:nth-child(3)) {
+  animation: slide3 33s infinite;
+}
+.slides:has(> :last-child:nth-child(4)) {
+  animation: slide4 44s infinite;
+}
+.slides:has(> :last-child:nth-child(5)) {
+  animation: slide5 55s infinite;
+}
+
+/* Keyframes for the sliding effect */
+@keyframes slide2 {
+  0%, 100% { transform: translateX(0); }
+  33%, 66% { transform: translateX(-100%); }
+}
+@keyframes slide3 {
+  0%, 100% { transform: translateX(0); }
+  33%, 66% { transform: translateX(-100%); }
+  17%, 50% { transform: translateX(-200%); }
+}
+@keyframes slide4 {
+  0%, 100% { transform: translateX(0); }
+  12%, 88% { transform: translateX(-100%); }
+  25%, 75% { transform: translateX(-200%); }
+  36%, 64% { transform: translateX(-300%); }
+}
+@keyframes slide5 {
+  0%, 100% { transform: translateX(0); }
+  10%, 90% { transform: translateX(-100%); }
+  20%, 80% { transform: translateX(-200%); }
+  30%, 70% { transform: translateX(-300%); }
+  40%, 60% { transform: translateX(-400%); }
 }
