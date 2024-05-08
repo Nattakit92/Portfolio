@@ -313,6 +313,15 @@ img {
 .skills__ux {
   width: 80%;
 }
+.scores_sat_m {
+  width: 98%;
+}
+.scores_sat_e {
+  width: 60%;
+}
+.scores_ielts {
+  width: 80%;
+}
 .skills__img {
   border-radius: 0.5rem;
 }
